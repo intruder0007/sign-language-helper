@@ -2,7 +2,7 @@
 
 A real-time Python application that uses OpenCV and MediaPipe to recognize American Sign Language (ASL) gestures and convert them into text.
 
-## Features
+## ✨ Features
 
 - **Real-time Hand Detection**: Detects and tracks hands using MediaPipe
 - **Gesture Recognition**: Recognizes ASL letters (A-Z), numbers (0-9), and special commands
@@ -10,6 +10,44 @@ A real-time Python application that uses OpenCV and MediaPipe to recognize Ameri
 - **Customizable Model**: Train your own gesture recognition model using collected data
 - **Easy To Use**: Simple keyboard controls and intuitive interface
 - **Data Collection**: Built-in tool to collect training data for custom gestures
+
+## 🎯 Enhanced Features (v2.0)
+
+### Advanced Visualization
+- Real-time confidence bars for hand detection
+- Gesture recognition confidence display
+- Gesture history trail tracking
+- Performance metrics display (FPS, detection time, accuracy)
+- Gesture recognition grid (shows recognized vs available)
+- Enhanced hand skeleton with finger identification
+
+### Statistics & Analytics
+- Session statistics tracking
+- Per-gesture performance metrics
+- FPS monitoring and framerate analysis
+- Performance timing (detection & recognition)
+- Automatic improvement recommendations
+- JSON export for data analysis
+
+### Voice Feedback
+- Text-to-speech for recognized characters
+- Configurable speech rate and volume
+- Sound effects for gesture confirmation
+- Toggle voice on/off during operation
+
+### Intelligent Analysis
+- Hand movement stability analysis
+- Gesture speed and motion detection
+- Hand size tracking and analysis
+- Gesture similarity comparison
+- Gesture pattern recognition
+
+### Data Preprocessing
+- Landmark normalization (Z-score, min-max, robust)
+- Movement smoothing (Savitzky-Golay filter)
+- Outlier detection and removal
+- Hand shape descriptor extraction
+- Data augmentation for training
 
 ## Project Structure
 
@@ -65,10 +103,21 @@ cd src
 python main.py
 ```
 
-The app will:
-- Detect your hands in real-time
-- Display detected hand landmarks
-- Show recognized gestures (basic detection)
+### Enhanced App (With Advanced Features)
+
+For the enhanced version with visualization, statistics, and voice feedback:
+
+```bash
+cd src
+python enhanced_main.py
+```
+
+**Enhanced App Features:**
+- Real-time performance metrics
+- Voice feedback for recognized gestures
+- Session statistics tracking
+- Automatic improvement recommendations
+- Advanced visualization
 
 ### Training a Custom Model
 
@@ -92,11 +141,15 @@ The app will:
 3. **Use the Trained Model**:
    ```bash
    python main.py
+   # or for enhanced version:
+   python enhanced_main.py
    ```
    - The app will automatically load your trained model
    - Gestures will be recognized and converted to text
 
 ## Keyboard Shortcuts
+
+### Basic App (main.py)
 
 | Key | Function |
 |-----|----------|
@@ -104,6 +157,18 @@ The app will:
 | `c` | Clear recognized text |
 | `s` | Save text to file |
 | `r` | Reset gesture sequence |
+
+### Enhanced App (enhanced_main.py)
+
+| Key | Function |
+|-----|----------|
+| `q` | Quit the application |
+| `c` | Clear recognized text |
+| `s` | Save text to file |
+| `r` | Reset gesture sequence |
+| `v` | Toggle voice feedback on/off |
+| `t` | Toggle statistics display |
+| `x` | Export session statistics to JSON |
 
 ## Supported Gestures
 
